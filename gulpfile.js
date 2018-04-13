@@ -17,12 +17,6 @@ gulp.task('message', function(){
     
 });
 
-//default message ~ run using 'gulp'
-gulp.task('default', function(){
-    return console.log('Gulp is running...');
-    
-});
-
 //copy all html files to dist folder
 gulp.task('copyHTML', function(){
     gulp.src('src/*.html')
@@ -49,3 +43,6 @@ gulp.task('sass', function() {
          .pipe(sass().on('error', sass.logError)) 
          .pipe(gulp.dest('dist/css'));
  });
+
+ //default message ~ run all tasks using 'gulp' cmd
+gulp.task('default', ['message', 'copyHTML', 'imageMin', 'minify', 'sass'] );
