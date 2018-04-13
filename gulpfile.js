@@ -1,7 +1,8 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
 
 /*
     --TOP LEVEL FUNCTIONS--
@@ -44,5 +45,13 @@ gulp.task('sass', function() {
          .pipe(gulp.dest('dist/css'));
  });
 
+ //concatenate js scripts
+ gulp.task('scripts', function(){
+    gulp.src('src/js/*.js')
+        .pipe(concat('main.js'))
+        .pipe(uglify()) 
+        .pipe(gulp.dest('dist/js'));
+ });
+
  //default message ~ run all tasks using 'gulp' cmd
-gulp.task('default', ['message', 'copyHTML', 'imageMin', 'minify', 'sass'] );
+gulp.task('default', ['message', 'copyHTML', 'imageMin', 'sass', 'scripts'] );
