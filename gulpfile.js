@@ -19,3 +19,9 @@ gulp.task('default', function(){
     return console.log('Gulp is running...');
     
 });
+
+//copy all html files to dist folder
+gulp.task('copyHTML', function(){
+    gulp.src('src/*.html')
+        .pipe(gulp.dest('dist'));
+});
