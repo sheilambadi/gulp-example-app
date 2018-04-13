@@ -8,8 +8,14 @@ const gulp = require('gulp');
     gulp.watch - watch files and folders for changes
 */
 
-//logs message
+//logs message ~ run using 'gulp message'
 gulp.task('message', function(){
+    return console.log('Gulp is running...');
+    
+});
+
+//default message ~ run using 'gulp'
+gulp.task('default', function(){
     return console.log('Gulp is running...');
     
 });
