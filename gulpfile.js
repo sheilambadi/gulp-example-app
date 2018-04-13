@@ -55,3 +55,11 @@ gulp.task('sass', function() {
 
  //default message ~ run all tasks using 'gulp' cmd
 gulp.task('default', ['message', 'copyHTML', 'imageMin', 'sass', 'scripts'] );
+
+//watch files and folders for changes
+gulp.task('watch', function(){
+    gulp.watch('src/js/*.js', ['scripts']);
+    gulp.watch('src/images/*', ['imageMin']);
+    gulp.watch('src/sass/*.scss', ['sass']);
+    gulp.watch('src/*.html', ['copyHTML']);
+});
