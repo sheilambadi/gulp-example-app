@@ -1,5 +1,7 @@
 # [Gulp Example App](https://github.com/sheilambadi/gulp-example-app)
-Learning gulp so as to contribute to the [Popcorn Time Desktop](https://github.com/popcorn-official/popcorn-desktop) application 
+Learning gulp so as to contribute to the [Popcorn Time Desktop](https://github.com/popcorn-official/popcorn-desktop) application
+
+Visit [gulp.js](https://gulpjs.com/ "gulpjs") for more information on using gulp.
 
 ## Getting Started
 [Clone](https://github.com/sheilambadi/gulp-example-app) this repository and build a number of assets using gulp.
@@ -11,7 +13,7 @@ The master branch contains the latest release.
 
 If you encounter trouble with the above method, you can try:
 
-1. `npm install -g gulp ` (Linux: you may need to run with `sudo`)
+1. `npm install gulp-cli -g ` (Linux: you may need to run with `sudo`)
 1. `gulp ` or `gulp watch`
 
 
